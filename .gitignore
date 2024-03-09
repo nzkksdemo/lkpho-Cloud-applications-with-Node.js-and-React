@@ -1,3 +1,12 @@
+CD220Labs/async_callback/node_modules/
+CD220Labs/expressjs/node_modules/
+CD220Labs/http_server/node_modules/
+CD220Labs/props_and_states/node_modules/
+CD220Labs/react-apps/node_modules/
+CD220Labs/react_class_component/node_modules/
+CD220Labs/react_pages/node_modules/
+CD220Labs/todoapp/node_modules/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
