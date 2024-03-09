@@ -20,6 +20,10 @@ app.get("/:name",(req,res)=>{
     res.send("Hello "+req.params.name)
 })
 
+app.get("/fetchMonth/:num",(req,res)=>{
+    res.send("The number is "+req.params.num)
+})
+
 app.listen(3333, () => {
     console.log(`Listening at http://localhost:3333`)
 })
