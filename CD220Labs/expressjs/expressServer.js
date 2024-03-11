@@ -33,8 +33,12 @@ app.get("/fetchMonth/:num",(req,res)=>{
     // res.send("The month is "+ monthName);
 
     // simple way
-    const givenNumber = req.params.num;
-    res.send("The month is "+ months[givenNumber - 1]);
+    const givenNumber = parseInt(req.params.num);
+    if (givenNumber < 1 || givenNumber > 12) {
+        res.send("Not a valid number");
+    } else {
+        res.send("The month is "+ months[givenNumber - 1]);
+    }
 })
 
 app.listen(3333, () => {
