@@ -1,6 +1,8 @@
 const express = require('express');
 const app = new express();
 
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
 let loginDetails = [];
 
 app.get("/",(req,res)=>{
@@ -21,7 +23,18 @@ app.get("/:name",(req,res)=>{
 })
 
 app.get("/fetchMonth/:num",(req,res)=>{
-    res.send("The number is "+req.params.num)
+    // let monthName = '';
+    // for (var i = 0; i < months.length; i++) {
+    //     if (i === parseInt(req.params.num)) {
+    //         monthName = months[i];
+    //     }
+    // }
+
+    // res.send("The month is "+ monthName);
+
+    // simple way
+    const givenNumber = req.params.num;
+    res.send("The month is "+ months[givenNumber - 1]);
 })
 
 app.listen(3333, () => {
